@@ -1,0 +1,250 @@
+.scoreboard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 60%;
+  margin: 0px auto;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding-top: 4%;
+}
+
+.scoreboard .pScore, .scoreboard .cScore {
+  text-align: center;
+  font-size: 32px;
+  color: #e2dede;
+}
+
+.scoreboard .pScore p, .scoreboard .cScore p {
+  padding-top: 10px;
+}
+
+.intro {
+  width: 60%;
+  margin: 6% auto 0%;
+  text-align: center;
+  opacity: 1;
+  -webkit-transition: opacity 0.5s ease-in;
+  transition: opacity 0.5s ease-in;
+}
+
+.intro h2, .intro button {
+  font-size: 40px;
+  color: #e2dede;
+}
+
+.intro button {
+  width: 25%;
+  margin: 0px auto;
+  border: 0px transparent none;
+  background-color: #e9441b;
+  border-radius: 5px;
+  padding: 8px 2%;
+  cursor: pointer;
+  margin-top: 2%;
+}
+
+.hands {
+  width: 60%;
+  margin: 0px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.hands #cHandn, .hands #pHand {
+  -webkit-user-drag: none;
+}
+
+.hands #cHand {
+  -webkit-transform: rotateY(180deg) rotateZ(150deg);
+          transform: rotateY(180deg) rotateZ(150deg);
+  -webkit-transition: opacity 0.5s ease-in;
+  transition: opacity 0.5s ease-in;
+  opacity: 1;
+}
+
+.hands #pHand {
+  -webkit-transform: rotateZ(150deg);
+          transform: rotateZ(150deg);
+  opacity: 1;
+  -webkit-transition: opacity 0.5s ease-in;
+  transition: opacity 0.5s ease-in;
+}
+
+.options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 60%;
+  margin: 5% auto 0%;
+}
+
+.options button {
+  font-size: 30px;
+  border: 0px transparent none;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.result {
+  width: 60%;
+  text-align: center;
+  position: absolute;
+  top: 40%;
+  right: 20%;
+  -webkit-transition: opacity 1s ease-in;
+  transition: opacity 1s ease-in;
+  opacity: 0;
+  z-index: -1;
+}
+
+.result h1, .result button {
+  color: #e2dede;
+  font-size: 40px;
+}
+
+.result button {
+  width: 25%;
+  margin: 0px auto;
+  border: 0px transparent none;
+  background-color: #e9441b;
+  border-radius: 5px;
+  padding: 8px 2%;
+  cursor: pointer;
+  margin-top: 2%;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+}
+
+section {
+  height: 100vh;
+  font-family: 'Lato','Arial';
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#30cfd0), to(#330867));
+  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+section .game {
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease-in;
+  transition: opacity 0.5s ease-in;
+}
+
+.fadeIn {
+  opacity: 1 !important;
+  z-index: 1;
+}
+
+.fadeIn button {
+  cursor: pointer;
+}
+
+.fadeOut {
+  cursor: default;
+  opacity: 0 !important;
+}
+
+@media only screen and (max-width: 1440px) {
+  #startButton, .result > button {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  #startButton, .result > button {
+    margin-top: 50px;
+    font-size: 36px;
+    width: 45%;
+  }
+  .hands {
+    width: 85%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .hands {
+    width: 100%;
+  }
+  .options {
+    margin-top: 80px;
+    width: 100%;
+  }
+  #startButton {
+    font-size: 27px;
+  }
+}
+
+@media only screen and (max-width: 426px) {
+  #startButton, .result > button {
+    margin-top: 25px;
+    font-size: 30px;
+    width: 100%;
+  }
+  .scoreboard {
+    width: 100%;
+  }
+  .scoreboard .pScore h3, .scoreboard .cScore h3 {
+    font-size: 30px;
+  }
+  .options button {
+    font-size: 23px;
+  }
+}
+
+@media only screen and (max-width: 321px) {
+  .scoreboard {
+    width: 100%;
+  }
+  .scoreboard .pScore h3, .scoreboard .cScore h3 {
+    font-size: 20px;
+  }
+  .options button {
+    font-size: 18px;
+  }
+}
+
+@-webkit-keyframes move {
+  0% {
+    bottom: 0px;
+  }
+  50% {
+    bottom: 100px;
+  }
+  100% {
+    bottom: 0px;
+  }
+}
+
+@keyframes move {
+  0% {
+    bottom: 0px;
+  }
+  50% {
+    bottom: 100px;
+  }
+  100% {
+    bottom: 0px;
+  }
+}
+
+.animation {
+  position: relative;
+  -webkit-animation: move 0.5s ease-in-out 0.1s 3;
+          animation: move 0.5s ease-in-out 0.1s 3;
+}
+/*# sourceMappingURL=mystyle.css.map */

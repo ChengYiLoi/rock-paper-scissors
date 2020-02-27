@@ -1,0 +1,18 @@
+.scoreboard{
+    display: flex;
+    width: 60%;
+    margin: 0px auto;
+    justify-content: space-evenly;
+    padding-top: 4%;
+
+    .pScore, .cScore{
+        text-align: center;
+        font-size: 32px;
+        color: $whiteText;
+        p{
+            padding-top: 10px;
+        }
+       
+    }
+
+}

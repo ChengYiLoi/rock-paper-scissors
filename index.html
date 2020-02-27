@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="myStyle.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+    <section>
+        <div class="scoreboard game">
+            <div class="pScore">
+                <h3>Player</h3>
+                <p id="pScore">0</p>
+            </div>
+            <div class="cScore">
+                <h3>Computer</h3>
+                <p id="cScore">0</p>
+            </div>
+        </div>
+        <div class="intro">
+            <h2>Rock Paper Scissors</h2>
+            <button id="startButton" type="button" onclick="startGame(event)">Best of 3</button>
+            <button id="startButton" type="button" onclick="startGame(event)">Best of 5</button>
+        </div>
+        <div class="hands game">
+            <img id="pHand" class="" src="images/rock.svg" alt="">
+            <img id="cHand" class="" src="images/rock.svg" alt="">
+        </div>
+        <div class="options game">
+            <button onclick="check(event);" type="button">Rock</button>
+            <button onclick="check(event);" type="button">Paper</button>
+            <button onclick="check(event);" type="button">Scissors</button>
+        </div>
+        <div class="result">
+            <h1 id="winner"></h1>
+            <button onclick="window.location.reload();">Play Again</button>
+            <button onclick="window.close();">Exit</button>
+        </div>
+    </section>
+  
+</body>
+<script src="myScript.js"></script>
+</html>

@@ -1,0 +1,19 @@
+.hands{
+    width: 60%;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-evenly;
+    #cHandn, #pHand{
+        -webkit-user-drag: none;
+    }
+    #cHand{
+        transform: rotateY(180deg) rotateZ(150deg);
+        transition: opacity 0.5s ease-in;
+        opacity: 1;
+    }
+    #pHand{
+        transform: rotateZ(150deg);
+        opacity: 1;
+        transition: opacity 0.5s ease-in;
+    }
+}

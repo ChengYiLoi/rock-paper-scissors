@@ -1,0 +1,110 @@
+@import 'styles/colors';
+@import 'styles/scoreboard';
+@import 'styles/intro';
+@import 'styles/hands';
+@import 'styles/options';
+@import 'styles/result';
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    outline: none;
+}
+section{
+    height: 100vh;
+    font-family: 'Lato','Arial';
+    background-image: $darkToLightBlue;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .game{
+        opacity: 0;
+        transition: opacity 0.5s ease-in;
+    }
+}
+
+
+.fadeIn{
+    opacity: 1 !important;
+    
+    button{
+        cursor: pointer;
+    }
+    z-index: 1;
+}
+.fadeOut{
+    cursor: default;
+    opacity: 0 !important;
+}
+@media only screen and (max-width: 1440px){
+    #startButton, .result > button{
+        font-size: 30px;
+    }
+}
+@media only screen and (max-width: 1024px){
+    #startButton, .result > button{
+        margin-top: 50px;
+        font-size: 36px;
+        width: 45%;
+    }
+    .hands{
+        width: 85%;
+    }
+}
+@media only screen and (max-width: 768px){
+    .hands{
+        width: 100%;
+    }
+    .options{
+        margin-top: 80px;
+        width: 100%;
+    }
+    #startButton{
+        font-size: 27px;
+    }
+}
+@media only screen and (max-width: 426px){
+    #startButton, .result > button{
+        margin-top: 25px;
+        font-size: 30px;
+        width: 100%;
+    }
+    .scoreboard{
+        width: 100%;
+        .pScore, .cScore{
+            h3{
+                font-size: 30px;
+            }
+        }
+    }
+ 
+    .options{
+        button{
+            font-size: 23px;
+        }
+    }
+}
+@media only screen and (max-width: 321px){
+    .scoreboard{
+        width: 100%;
+        .pScore, .cScore{
+            h3{
+                font-size: 20px;
+            }
+        }
+    }
+ 
+    .options{
+        button{
+            font-size: 18px;
+        }
+    }
+}
+@keyframes move {
+    0% {bottom: 0px;}
+    50% {bottom: 100px;}
+    100% {bottom: 0px}
+}
+.animation{
+    position: relative;
+    animation: move 0.5s ease-in-out 0.1s 3;
+}
